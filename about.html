@@ -1,0 +1,894 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Conheça a Lens Studio, um estúdio criativo em Maputo dedicado à fotografia, vídeo e produção audiovisual.">
+
+    <title>Sobre Nós | Lens Studio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- CSS específico da página Sobre -->
+    <style>
+        /* HERO */
+
+        .about-hero {
+            min-height: 75vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(10, 10, 10, .78), rgba(10, 10, 10, .15)),
+                url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=2200&q=85')
+                center 45% / cover no-repeat;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            max-width: 850px;
+        }
+
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: 1.1;
+            margin: 25px 0;
+        }
+
+        .about-hero h1 em {
+            color: #e4c75a;
+        }
+
+        .about-hero p {
+            max-width: 600px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: rgba(255,255,255,.85);
+        }
+
+        .about-tag {
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: #e4c75a;
+        }
+
+        /* INTRODUÇÃO */
+
+        .about-intro {
+            padding: 110px 0;
+            background: var(--bg-color, #fff);
+        }
+
+        .about-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrap {
+            position: relative;
+        }
+
+        .about-image-wrap img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-image-caption {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: #fff;
+            color: #222;
+            padding: 15px 22px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .about-intro-text h2,
+        .about-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .about-intro-text h2 span {
+            color:#e4c75a;
+            font-style: italic;
+        }
+
+        .about-intro-text p {
+            color: #777;
+            line-height: 1.9;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .about-eyebrow {
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: #e4c75a;
+        }
+
+        /* MISSÃO E VISÃO */
+
+        .about-purpose {
+            padding: 100px 0;
+            background: #171717;
+            color: white;
+        }
+
+        .purpose-heading {
+            max-width: 700px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .purpose-heading h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 4vw, 3.5rem);
+            margin-top: 20px;
+        }
+
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .purpose-card {
+            border: 1px solid rgba(255,255,255,.14);
+            padding: 45px;
+            transition: .3s;
+        }
+
+        .purpose-card:hover {
+            border-color: #e4c75a;
+            transform: translateY(-5px);
+        }
+
+        .purpose-card i {
+            font-size: 30px;
+            color: #e4c75a;
+            margin-bottom: 25px;
+        }
+
+        .purpose-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .purpose-card p {
+            color: #aaa;
+            line-height: 1.9;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* VALORES */
+
+        .about-values {
+            padding: 110px 0;
+            background: #f7f6f3;
+        }
+
+        .values-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .values-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 4vw, 3.5rem);
+            margin: 20px 0;
+        }
+
+        .values-header p {
+            color: #777;
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 35px 25px;
+            min-height: 245px;
+            transition: .3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .value-card i {
+            font-size: 27px;
+            color: #e4c75a;
+            margin-bottom: 25px;
+        }
+
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+            margin-bottom: 13px;
+        }
+
+        .value-card p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #777;
+            margin: 0;
+        }
+
+        /* DIFERENCIAL */
+
+        .about-difference {
+            padding: 110px 0;
+            background: #fff;
+        }
+
+        .difference-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .difference-image img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+        }
+
+        .difference-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 4vw, 3.5rem);
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .difference-content > p {
+            color: #777;
+            line-height: 1.9;
+        }
+
+        .difference-item {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .difference-item i {
+            color:#e4c75a;
+            font-size: 21px;
+            margin-top: 4px;
+        }
+
+        .difference-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .difference-item p {
+            color: #888;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+
+        .about-cta {
+            padding: 100px 20px;
+            text-align: center;
+            background:
+                linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+                url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=2000&q=85')
+                center / cover no-repeat;
+            color: white;
+        }
+
+        .about-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin: 20px 0;
+        }
+
+        .about-cta h2 em {
+            color: #e4c75a;
+        }
+
+        .about-cta p {
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 991px) {
+            .about-intro-grid,
+            .difference-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-image-wrap img,
+            .difference-image img {
+                height: 430px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero {
+                min-height: 650px;
+            }
+
+            .about-hero-content {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .about-intro,
+            .about-values,
+            .about-difference,
+            .about-purpose {
+                padding: 75px 0;
+            }
+
+            .purpose-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .purpose-card {
+                padding: 30px;
+            }
+
+            .about-image-wrap img,
+            .difference-image img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                LENS
+                <span>STUDIO</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">Sobre</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="portifolio.html">Portfólio</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Alterar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="contact.html" class="btn-primary">
+                    Reservar sessão
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="about-hero">
+
+        <div class="container">
+
+            <div class="about-hero-content">
+
+                <span class="about-tag">
+                    CONHEÇA A LENS STUDIO
+                </span>
+
+                <h1>
+                    Mais do que imagens,
+                    <em>contamos histórias.</em>
+                </h1>
+
+                <p>
+                    Somos apaixonados por transformar momentos
+                    especiais em memórias visuais. Através da
+                    fotografia, do vídeo e da criatividade,
+                    damos vida a histórias que merecem ser lembradas.
+                </p>
+
+                <a href="portifolio.html" class="btn-light">
+                    Descubra o nosso trabalho
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUEM SOMOS -->
+
+    <section class="about-intro">
+
+        <div class="container">
+
+            <div class="about-intro-grid">
+
+                <div class="about-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200&q=85"
+                        alt="Profissional a realizar uma sessão fotográfica">
+
+                    <div class="about-image-caption">
+                        LENS STUDIO · MAPUTO
+                    </div>
+
+                </div>
+
+                <div class="about-intro-text">
+
+                    <span class="about-eyebrow">
+                        01 · QUEM SOMOS
+                    </span>
+
+                    <h2>
+                        A paixão pela imagem.
+                        <span>A arte de contar histórias.</span>
+                    </h2>
+
+                    <p>
+                        A Lens Studio é um estúdio criativo dedicado
+                        à fotografia, produção de vídeo e criação
+                        de conteúdos audiovisuais.
+                    </p>
+
+                    <p>
+                        Acreditamos que cada pessoa, cada marca
+                        e cada acontecimento tem uma história única
+                        para contar. O nosso trabalho consiste em
+                        captar a essência desses momentos e
+                        transformá-los em experiências visuais
+                        memoráveis.
+                    </p>
+
+                    <p>
+                        Trabalhamos com atenção aos detalhes,
+                        criatividade e dedicação, procurando
+                        sempre proporcionar uma experiência
+                        especial em cada projecto.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MISSÃO E VISÃO -->
+
+    <section class="about-purpose">
+
+        <div class="container">
+
+            <div class="purpose-heading">
+
+                <span class="about-eyebrow">
+                    02 · O NOSSO PROPÓSITO
+                </span>
+
+                <h2>
+                    O que nos move.
+                </h2>
+
+            </div>
+
+            <div class="purpose-grid">
+
+                <div class="purpose-card">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <h3>Missão</h3>
+
+                    <p>
+                        Criar experiências visuais de qualidade
+                        através da fotografia e do vídeo,
+                        valorizando histórias, pessoas, marcas
+                        e momentos especiais.
+                    </p>
+
+                </div>
+
+                <div class="purpose-card">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    <h3>Visão</h3>
+
+                    <p>
+                        Ser uma referência na área da fotografia
+                        e produção audiovisual, reconhecida pela
+                        criatividade, excelência e capacidade
+                        de transformar ideias em imagens memoráveis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VALORES -->
+
+    <section class="about-values">
+
+        <div class="container">
+
+            <div class="values-header">
+
+                <span class="about-eyebrow">
+                    03 · AQUILO EM QUE ACREDITAMOS
+                </span>
+
+                <h2>
+                    Os nossos valores.
+                </h2>
+
+                <p>
+                    Os princípios que orientam a nossa forma
+                    de trabalhar e de criar experiências
+                    para cada cliente.
+                </p>
+
+            </div>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h3>Criatividade</h3>
+
+                    <p>
+                        Procuramos novas perspectivas e
+                        ideias para dar personalidade a
+                        cada projecto.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                    <h3>Qualidade</h3>
+
+                    <p>
+                        Valorizamos os detalhes e procuramos
+                        excelência em cada trabalho realizado.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                    <h3>Compromisso</h3>
+
+                    <p>
+                        Respeitamos cada cliente, cada ideia
+                        e cada compromisso assumido.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>Paixão</h3>
+
+                    <p>
+                        Colocamos dedicação e entusiasmo
+                        em tudo aquilo que fazemos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- O NOSSO DIFERENCIAL -->
+
+    <section class="about-difference">
+
+        <div class="container">
+
+            <div class="difference-grid">
+
+                <div class="difference-content">
+
+                    <span class="about-eyebrow">
+                        04 · O NOSSO DIFERENCIAL
+                    </span>
+
+                    <h2>
+                        Cada detalhe conta.
+                        Cada história importa.
+                    </h2>
+
+                    <p>
+                        Mais do que entregar fotografias e vídeos,
+                        queremos criar uma experiência que
+                        represente verdadeiramente aquilo que
+                        os nossos clientes desejam transmitir.
+                    </p>
+
+                    <div class="difference-item">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        <div>
+                            <h4>Olhar criativo</h4>
+                            <p>
+                                Procuramos perspectivas únicas
+                                para tornar cada imagem especial.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="difference-item">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <div>
+                            <h4>Atendimento personalizado</h4>
+                            <p>
+                                Cada projecto é tratado de acordo
+                                com as necessidades e expectativas
+                                do cliente.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="difference-item">
+
+                        <i class="fa-solid fa-film"></i>
+
+                        <div>
+                            <h4>Soluções audiovisuais</h4>
+                            <p>
+                                Reunimos fotografia, vídeo e
+                                imagens aéreas para contar
+                                histórias de diferentes formas.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="difference-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85"
+                        alt="Equipamento profissional de fotografia">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="about-cta">
+
+        <div class="container">
+
+            <span class="about-eyebrow">
+                VAMOS CONTAR A SUA HISTÓRIA?
+            </span>
+
+            <h2>
+                A próxima história
+                <em>pode ser a sua.</em>
+            </h2>
+
+            <p>
+                Estamos prontos para transformar as suas
+                ideias em experiências visuais memoráveis.
+            </p>
+
+            <a href="contact.html" class="btn-light">
+                Entre em contacto
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+                        LENS
+                        <span>STUDIO</span>
+                    </a>
+
+                    <p>
+                        Fotografia e vídeo para
+                        histórias que merecem
+                        ser lembradas.
+                    </p>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h4>Navegação</h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Sobre</a>
+                    <a href="services.html">Serviços</a>
+                    <a href="portifolio.html">Portfólio</a>
+                    <a href="contact.html">Contacto</a>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h4>Contacto</h4>
+
+                    <a href="mailto:hello@lensstudio.com">
+                        hello@lensstudio.com
+                    </a>
+
+                    <a href="tel:+258840000000">
+                        +258 84 000 0000
+                    </a>
+
+                    <span>Maputo, Moçambique</span>
+
+                </div>
+
+                <div class="footer-social">
+
+                    <h4>Siga-nos</h4>
+
+                    <div>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Lens Studio.
+                    Todos os direitos reservados.
+                </span>
+
+                <span>
+                    Fotografia · Vídeo · Criatividade
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1965 @@
+```html
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Lens Studio - Fotografia, vídeo, drone e produção audiovisual em Moçambique.">
+
+    <title>Serviços | Lens Studio</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f6f2;
+            color: #202020;
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .main-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 22px 5%;
+            z-index: 1000;
+            background: white;
+
+           
+        }
+
+
+        .header-container {
+            width: min(1200px, 100%);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+
+        /* LOGO */
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+
+        .logo span {
+            color: #d4af37;
+        }
+
+
+        /* MENU */
+
+        .main-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .main-nav a {
+            color: rgb(10, 1, 1);
+            text-decoration: none;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #d4af37;
+        }
+
+
+        /* ACTIONS */
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        #theme-toggle {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,.5);
+            background: transparent;
+            color: white;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+        }
+
+
+        .btn-primary {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 11px 20px;
+
+            border-radius: 30px;
+
+            background: #d4af37;
+
+            color: #111;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .btn-primary:hover {
+            background: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .services-cover {
+
+            min-height: 70vh;
+
+            padding: 160px 20px 90px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.55),
+                    rgba(0,0,0,.78)
+                ),
+                url("https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .services-cover-content {
+            width: min(850px, 92%);
+
+            margin: auto;
+        }
+
+
+        .services-cover-content small {
+            display: block;
+
+            margin-bottom: 20px;
+
+            color: #d4af37;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+        }
+
+
+        .services-cover-content h1 {
+            margin-bottom: 25px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 8vw, 82px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+        }
+
+
+        .services-cover-content h1 em {
+            color: #d4af37;
+
+            font-style: italic;
+        }
+
+
+        .services-cover-content p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #ddd;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           INTRODUÇÃO
+        ===================================================== */
+
+        .services-intro {
+            width: min(950px, 90%);
+
+            margin: auto;
+
+            padding: 90px 0 70px;
+
+            text-align: center;
+        }
+
+
+        .services-label {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+
+            color: #9c7900;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+
+        .services-label span {
+            color: #222;
+        }
+
+
+        .services-label div {
+            width: 35px;
+
+            height: 1px;
+
+            background: #d4af37;
+        }
+
+
+        .services-intro-content h2 {
+            max-width: 800px;
+
+            margin: 0 auto 25px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(36px, 5vw, 55px);
+
+            font-weight: 500;
+
+            line-height: 1.15;
+        }
+
+
+        .services-intro-content h2 em {
+            color: #a78300;
+
+            font-style: italic;
+        }
+
+
+        .services-intro-content p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #707070;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           SERVIÇOS
+        ===================================================== */
+
+        .services-list {
+            width: min(1100px, 90%);
+
+            margin: auto;
+
+            padding: 30px 0 100px;
+        }
+
+
+        .services-list-header {
+            margin-bottom: 45px;
+
+            text-align: center;
+        }
+
+
+        .services-list-header small {
+            color: #a78300;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+
+        .services-list-header h2 {
+            margin-top: 12px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(35px, 4vw, 50px);
+
+            font-weight: 500;
+        }
+
+
+        /* =====================================================
+           GRID
+        ===================================================== */
+
+        .services-grid-modern {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+
+        /* =====================================================
+           CARD
+        ===================================================== */
+
+        .service-modern-card {
+
+            position: relative;
+
+            min-width: 0;
+
+            min-height: 330px;
+
+            padding: 35px 28px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: flex-start;
+
+            text-align: center;
+
+            background: white;
+
+            border: 1px solid #e5e1d9;
+
+            border-radius: 18px;
+
+            color: #222;
+
+            text-decoration: none;
+
+            overflow: hidden;
+
+            transition: .35s;
+        }
+
+
+        .service-modern-card:hover {
+
+            transform: translateY(-7px);
+
+            border-color: #d4af37;
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,.10);
+        }
+
+
+        /* =====================================================
+           NUMBER
+        ===================================================== */
+
+        .service-number {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 20px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 42px;
+
+            color: #eeeae2;
+
+            line-height: 1;
+        }
+
+
+        /* =====================================================
+           ICON
+        ===================================================== */
+
+        .service-icon {
+
+            width: 65px;
+
+            height: 65px;
+
+            margin: 20px auto 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #f2eee6;
+
+            color: #a78300;
+
+            font-size: 22px;
+
+            transition: .3s;
+        }
+
+
+        .service-modern-card:hover .service-icon {
+
+            background: #d4af37;
+
+            color: #111;
+        }
+
+
+        /* =====================================================
+           CARD TEXT
+        ===================================================== */
+
+        .service-modern-card h3 {
+
+            width: 100%;
+
+            margin-bottom: 14px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            line-height: 1.25;
+        }
+
+
+        .service-modern-card p {
+
+            width: 100%;
+
+            max-width: 280px;
+
+            margin: 0 auto 25px;
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* LINK */
+
+        .service-link {
+
+            margin-top: auto;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            color: #9c7900;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .service-link i {
+            transition: .3s;
+        }
+
+
+        .service-modern-card:hover
+        .service-link i {
+
+            transform: translateX(5px);
+        }
+
+
+        /* =====================================================
+           CARD DESTAQUE
+        ===================================================== */
+
+        .service-feature {
+
+            grid-column: span 3;
+
+            min-height: 380px;
+
+            padding: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.60),
+                    rgba(0,0,0,.80)
+                ),
+                url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .service-feature > div {
+
+            width: min(650px, 100%);
+
+            margin: auto;
+        }
+
+
+        .service-feature .service-number {
+
+            color: rgba(255,255,255,.12);
+        }
+
+
+        .service-feature .service-icon {
+
+            margin: 0 auto 25px;
+
+            background:
+                rgba(212,175,55,.20);
+
+            color: #d4af37;
+        }
+
+
+        .service-feature h3 {
+
+            font-size: 34px;
+        }
+
+
+        .service-feature p {
+
+            max-width: 600px;
+
+            margin: 0 auto 25px;
+
+            color: #ddd;
+        }
+
+
+        .service-feature .service-link {
+
+            color: #d4af37;
+        }
+
+
+        /* =====================================================
+           PROCESSO
+        ===================================================== */
+
+        .process-section {
+
+            padding: 90px 20px;
+
+            background: #ece9e2;
+        }
+
+
+        .process-container {
+
+            width: min(1100px, 90%);
+
+            margin: auto;
+        }
+
+
+        .process-heading {
+
+            max-width: 700px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+
+        .process-heading small {
+
+            color: #a78300;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+
+        .process-heading h2 {
+
+            margin: 12px 0;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(35px, 4vw, 50px);
+
+            font-weight: 500;
+        }
+
+
+        .process-heading p {
+
+            color: #777;
+        }
+
+
+        .process-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .process-item {
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: rgba(255,255,255,.45);
+
+            border-radius: 15px;
+        }
+
+
+        .process-item span {
+
+            width: 55px;
+
+            height: 55px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid #d4af37;
+
+            border-radius: 50%;
+
+            color: #9c7900;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .process-item h3 {
+
+            margin-bottom: 12px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 21px;
+
+            font-weight: 500;
+        }
+
+
+        .process-item p {
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .services-cta {
+
+            padding: 110px 20px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.72),
+                    rgba(0,0,0,.88)
+                ),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .services-cta small {
+
+            color: #d4af37;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+
+        .services-cta h2 {
+
+            max-width: 800px;
+
+            margin: 18px auto;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 6vw, 65px);
+
+            font-weight: 500;
+
+            line-height: 1.1;
+        }
+
+
+        .services-cta h2 em {
+
+            color: #d4af37;
+
+            font-style: italic;
+        }
+
+
+        .services-cta p {
+
+            max-width: 550px;
+
+            margin: 0 auto 30px;
+
+            color: #ccc;
+
+            line-height: 1.8;
+        }
+
+
+        .services-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 14px 30px;
+
+            background: white;
+
+            color: #111;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+
+        .services-button:hover {
+
+            background: #d4af37;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+
+            background: #111;
+
+            color: white;
+
+            padding: 65px 20px 25px;
+        }
+
+
+        .footer-container {
+
+            width: min(1100px, 90%);
+
+            margin: auto;
+        }
+
+
+        .footer-top {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 40px;
+
+            padding-bottom: 45px;
+        }
+
+
+        .footer-brand p {
+
+            max-width: 260px;
+
+            margin-top: 20px;
+
+            color: #aaa;
+
+            line-height: 1.7;
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+
+        .footer-links h4,
+        .footer-social h4 {
+
+            margin-bottom: 10px;
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+
+        .footer-links a,
+        .footer-links span {
+
+            color: #aaa;
+
+            text-decoration: none;
+
+            font-size: 13px;
+        }
+
+
+        .footer-links a:hover {
+
+            color: #d4af37;
+        }
+
+
+        .footer-social > div {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        .footer-social a {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid #444;
+
+            border-radius: 50%;
+
+            color: #d4af37;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+
+        .footer-social a:hover {
+
+            background: #d4af37;
+
+            color: #111;
+
+            border-color: #d4af37;
+        }
+
+
+        .footer-bottom {
+
+            padding-top: 25px;
+
+            border-top: 1px solid #333;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #777;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media(max-width: 950px) {
+
+            .main-nav {
+                display: none;
+            }
+
+
+            .services-grid-modern {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .service-feature {
+
+                grid-column: span 2;
+            }
+
+
+            .process-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .footer-top {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media(max-width: 600px) {
+
+            .main-header {
+
+                padding: 18px 20px;
+            }
+
+
+            .header-container {
+
+                justify-content: center;
+            }
+
+
+            .header-actions {
+
+                display: none;
+            }
+
+
+            .services-cover {
+
+                min-height: 70vh;
+
+                padding: 130px 20px 70px;
+            }
+
+
+            .services-cover-content h1 {
+
+                font-size: 48px;
+            }
+
+
+            .services-cover-content p {
+
+                font-size: 14px;
+            }
+
+
+            .services-intro {
+
+                width: 90%;
+
+                padding: 70px 0 55px;
+            }
+
+
+            .services-grid-modern {
+
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+
+            .service-feature {
+
+                grid-column: span 1;
+
+                min-height: 390px;
+
+                padding: 35px 25px;
+            }
+
+
+            .service-modern-card {
+
+                min-height: 320px;
+
+                padding: 30px 22px;
+            }
+
+
+            .process-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-top {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .footer-brand p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .footer-social > div {
+
+                justify-content: center;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+
+            LENS
+            <span>STUDIO</span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html"
+                       class="active">
+                        Serviços
+                    </a>
+                </li>
+
+                <li>
+                    <a href="portifolio.html">
+                        Portfólio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button id="theme-toggle"
+                    type="button">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <a href="contact.html"
+               class="btn-primary">
+
+                Reservar sessão
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="services-cover">
+
+        <div class="services-cover-content">
+
+            <small>
+                03 · SERVIÇOS
+            </small>
+
+
+            <h1>
+
+                Da ideia
+                <em>à imagem.</em>
+
+            </h1>
+
+
+            <p>
+
+                Criamos experiências visuais que combinam
+                criatividade, técnica e emoção para contar
+                histórias que merecem ser lembradas.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="services-intro">
+
+        <div class="services-label">
+
+            <span>01</span>
+
+            <div></div>
+
+            O QUE FAZEMOS
+
+        </div>
+
+
+        <div class="services-intro-content">
+
+            <h2>
+
+                Mais do que imagens,
+                <em>criamos experiências.</em>
+
+            </h2>
+
+
+            <p>
+
+                Na Lens Studio trabalhamos com fotografia,
+                vídeo e produção audiovisual para pessoas,
+                empresas, marcas e eventos.
+
+                <br><br>
+
+                Cada projeto é pensado de forma personalizada,
+                desde o primeiro contacto até à entrega final,
+                garantindo imagens que representam
+                verdadeiramente cada história.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SERVIÇOS -->
+
+    <section class="services-list">
+
+        <div class="services-list-header">
+
+            <small>
+                OS NOSSOS SERVIÇOS
+            </small>
+
+            <h2>
+                O que podemos criar consigo.
+            </h2>
+
+        </div>
+
+
+        <div class="services-grid-modern">
+
+
+            <!-- 01 -->
+
+            <a href="contact.html"
+               class="service-modern-card">
+
+                <span class="service-number">
+                    01
+                </span>
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                </div>
+
+
+                <h3>
+                    Fotografia
+                </h3>
+
+
+                <p>
+
+                    Retratos, sessões pessoais,
+                    fotografia corporativa,
+                    produtos, eventos e conteúdos
+                    para marcas.
+
+                </p>
+
+
+                <span class="service-link">
+
+                    Saber mais
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- 02 -->
+
+            <a href="contact.html"
+               class="service-modern-card">
+
+                <span class="service-number">
+                    02
+                </span>
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-video"></i>
+
+                </div>
+
+
+                <h3>
+                    Produção de Vídeo
+                </h3>
+
+
+                <p>
+
+                    Vídeos institucionais,
+                    campanhas publicitárias,
+                    conteúdos digitais e
+                    cobertura audiovisual.
+
+                </p>
+
+
+                <span class="service-link">
+
+                    Saber mais
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- 03 -->
+
+            <a href="contact.html"
+               class="service-modern-card">
+
+                <span class="service-number">
+                    03
+                </span>
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-helicopter"></i>
+
+                </div>
+
+
+                <h3>
+                    Filmagem com Drone
+                </h3>
+
+
+                <p>
+
+                    Imagens aéreas para eventos,
+                    propriedades, turismo,
+                    empresas e produções.
+
+                </p>
+
+
+                <span class="service-link">
+
+                    Saber mais
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- CASAMENTO -->
+
+            <a href="contact.html"
+               class="service-modern-card service-feature">
+
+                <span class="service-number">
+                    04
+                </span>
+
+
+                <div>
+
+                    <div class="service-icon">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Casamentos
+                    </h3>
+
+
+                    <p>
+
+                        Registamos cada detalhe,
+                        emoção e momento do seu casamento
+                        com uma abordagem elegante
+                        e cinematográfica.
+
+                    </p>
+
+
+                    <span class="service-link">
+
+                        Conhecer serviço
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- 05 -->
+
+            <a href="contact.html"
+               class="service-modern-card">
+
+                <span class="service-number">
+                    05
+                </span>
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+
+                <h3>
+                    Eventos Corporativos
+                </h3>
+
+
+                <p>
+
+                    Cobertura profissional de
+                    conferências, workshops,
+                    lançamentos e eventos.
+
+                </p>
+
+
+                <span class="service-link">
+
+                    Saber mais
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- 06 -->
+
+            <a href="contact.html"
+               class="service-modern-card">
+
+                <span class="service-number">
+                    06
+                </span>
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+
+                <h3>
+                    Pós-Produção
+                </h3>
+
+
+                <p>
+
+                    Edição de fotografia,
+                    montagem de vídeo,
+                    correção de cor e
+                    tratamento de imagem.
+
+                </p>
+
+
+                <span class="service-link">
+
+                    Saber mais
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROCESSO -->
+
+    <section class="process-section">
+
+        <div class="process-container">
+
+
+            <div class="process-heading">
+
+                <small>
+                    COMO TRABALHAMOS
+                </small>
+
+
+                <h2>
+                    Do primeiro contacto à entrega.
+                </h2>
+
+
+                <p>
+                    Um processo simples, transparente e personalizado.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-item">
+
+                    <span>01</span>
+
+                    <h3>
+                        Conversamos
+                    </h3>
+
+                    <p>
+                        Conhecemos o seu projeto,
+                        necessidades e expectativas.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <span>02</span>
+
+                    <h3>
+                        Planeamos
+                    </h3>
+
+                    <p>
+                        Definimos detalhes,
+                        conceito, local e cronograma.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <span>03</span>
+
+                    <h3>
+                        Criamos
+                    </h3>
+
+                    <p>
+                        Transformamos a sua ideia
+                        em imagens.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <span>04</span>
+
+                    <h3>
+                        Entregamos
+                    </h3>
+
+                    <p>
+                        Tratamos e finalizamos
+                        todo o material.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="services-cta">
+
+        <small>
+            TEM UM PROJETO EM MENTE?
+        </small>
+
+
+        <h2>
+
+            Vamos criar algo
+            <em>memorável.</em>
+
+        </h2>
+
+
+        <p>
+
+            Conte-nos sobre o seu evento,
+            projeto ou ideia e vamos encontrar
+            a melhor forma de transformar isso
+            em imagens.
+
+        </p>
+
+
+        <a href="contact.html"
+           class="services-button">
+
+            Solicitar orçamento
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="logo">
+
+                    LENS
+                    <span>STUDIO</span>
+
+                </a>
+
+
+                <p>
+
+                    Fotografia e vídeo para
+                    histórias que merecem
+                    ser lembradas.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Navegação
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    Sobre
+                </a>
+
+                <a href="services.html">
+                    Serviços
+                </a>
+
+                <a href="portifolio.html">
+                    Portfólio
+                </a>
+
+                <a href="contact.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Contacto
+                </h4>
+
+                <a href="mailto:hello@lensstudio.com">
+                    hello@lensstudio.com
+                </a>
+
+                <a href="tel:+258840000000">
+                    +258 84 000 0000
+                </a>
+
+                <span>
+                    Maputo, Moçambique
+                </span>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h4>
+                    Siga-nos
+                </h4>
+
+                <div>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Lens Studio.
+                Todos os direitos reservados.
+            </span>
+
+            <span>
+                Fotografia · Vídeo · Criatividade
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+```

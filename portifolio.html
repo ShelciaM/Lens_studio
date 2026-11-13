@@ -1,0 +1,1388 @@
+```html
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfólio Lens Studio - Fotografia e produção audiovisual em Moçambique.">
+
+    <title>Portfólio | Lens Studio</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="assets/style.css">
+
+
+    <!-- CSS ESPECÍFICO DO PORTFÓLIO -->
+
+    <style>
+/* =========================================================
+   PORTFÓLIO — HERO
+========================================================= */
+
+.portfolio-cover {
+    min-height: 58vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .78),
+            rgba(0, 0, 0, .35)
+        ),
+        url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================================
+   CONTEÚDO DO HERO
+========================================================= */
+
+.portfolio-cover-content {
+
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+}
+
+
+/* =========================================================
+   PEQUENO TÍTULO
+========================================================= */
+
+.portfolio-cover-content small {
+
+    display: inline-block;
+
+    color: #d4af37;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.portfolio-cover-content h1 {
+
+    margin: 0 0 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+}
+
+
+.portfolio-cover-content h1 em {
+
+    color: #d4af37;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+.portfolio-cover-content p {
+
+    max-width: 580px;
+
+    margin: 0;
+
+    color: #e0e0e0;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .portfolio-cover {
+
+        min-height: 58vh;
+    }
+
+    .portfolio-cover-content {
+
+        width: 90%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .portfolio-cover {
+
+        min-height: 65vh;
+
+        background-position: center;
+    }
+
+    .portfolio-cover-content {
+
+        width: 88%;
+    }
+
+    .portfolio-cover-content small {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 15px;
+    }
+
+    .portfolio-cover-content h1 {
+
+        font-size: 48px;
+
+        line-height: 1.05;
+
+        margin-bottom: 20px;
+    }
+
+    .portfolio-cover-content p {
+
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+}
+/* =========================================================
+   RESPONSIVO — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .portfolio-cover {
+
+        min-height: 58vh;
+    }
+
+    .portfolio-cover-content {
+
+        width: 90%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .portfolio-cover {
+
+        min-height: 65vh;
+
+        background-position: center;
+    }
+
+    .portfolio-cover-content {
+
+        width: 88%;
+    }
+
+    .portfolio-cover-content small {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 15px;
+    }
+
+    .portfolio-cover-content h1 {
+
+        font-size: 48px;
+
+        line-height: 1.05;
+
+        margin-bottom: 20px;
+    }
+
+    .portfolio-cover-content p {
+
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+}
+
+
+        /* =====================================================
+           FOTOGRAFIAS
+        ===================================================== */
+
+        .portfolio-content {
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 90px 0;
+
+        }
+
+
+        .portfolio-heading {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .portfolio-heading small {
+
+            color: #ad8700;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+
+        }
+
+
+        .portfolio-heading h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 48px;
+
+            font-weight: 500;
+
+            margin: 12px 0;
+
+            color: #222;
+
+        }
+
+
+        .portfolio-heading p {
+
+            color: #777;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           GRID
+        ===================================================== */
+
+        .photos-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        /* =====================================================
+           FOTO
+        ===================================================== */
+
+        .photo-box {
+
+            position: relative;
+
+            height: 280px;
+
+            overflow: hidden;
+
+            border-radius: 8px;
+
+            background: #ddd;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.08);
+
+        }
+
+
+        .photo-box.large {
+
+            height: 580px;
+
+        }
+
+
+        .photo-box.wide {
+
+            grid-column: span 2;
+
+        }
+
+
+        .photo-box img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .5s ease,
+                filter .5s ease;
+
+            filter: saturate(.88);
+
+        }
+
+
+        .photo-box:hover img {
+
+            transform: scale(1.04);
+
+            filter: brightness(.82);
+
+        }
+
+
+        /* =====================================================
+           TEXTO SOBRE FOTO
+        ===================================================== */
+
+        .photo-caption {
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            padding: 50px 22px 20px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,.75)
+                );
+
+            color: white;
+
+            opacity: 0;
+
+            transition: .35s;
+
+        }
+
+
+        .photo-box:hover .photo-caption {
+
+            opacity: 1;
+
+        }
+
+
+        .photo-caption small {
+
+            color: #d4af37;
+
+            letter-spacing: 2px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+        }
+
+
+        .photo-caption h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            margin: 5px 0 0;
+
+            font-weight: 500;
+
+        }
+
+
+        /* =====================================================
+           VÍDEOS
+        ===================================================== */
+
+        .videos-area {
+
+            background: #eeeae3;
+
+            padding: 90px 0;
+
+        }
+
+
+        .videos-container {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+        }
+
+
+        .videos-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+
+        }
+
+
+        .video-box {
+
+            background: white;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.07);
+
+        }
+
+
+        .video-box video {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            display: block;
+
+            object-fit: cover;
+
+            background: #111;
+
+        }
+
+
+        .video-description {
+
+            padding: 20px;
+
+        }
+
+
+        .video-description small {
+
+            color: #ad8700;
+
+            letter-spacing: 2px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+        }
+
+
+        .video-description h3 {
+
+            margin: 7px 0 0;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            font-weight: 500;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .portfolio-final {
+
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.82),
+                    rgba(0,0,0,.88)
+                ),
+                url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1800&q=70");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+        }
+
+
+        .portfolio-final small {
+
+            color: #d4af37;
+
+            letter-spacing: 3px;
+
+            font-weight: 700;
+
+            font-size: 10px;
+
+        }
+
+
+        .portfolio-final h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 6vw, 65px);
+
+            font-weight: 500;
+
+            margin: 18px auto;
+
+        }
+
+
+        .portfolio-final h2 em {
+
+            color: #d4af37;
+
+        }
+
+
+        .portfolio-final p {
+
+            color: #ccc;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .portfolio-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: white;
+
+            color: #111;
+
+            padding: 14px 27px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            transition: .3s;
+
+        }
+
+
+        .portfolio-button:hover {
+
+            background: #d4af37;
+
+            color: #111;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+        @media(max-width: 900px) {
+
+            .photos-container {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .photo-box.large {
+
+                height: 400px;
+
+            }
+
+
+            .photo-box.wide {
+
+                grid-column: span 2;
+
+            }
+
+
+            .videos-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            .portfolio-cover {
+
+                height: 60vh;
+
+            }
+
+
+            .portfolio-cover-content {
+
+                width: 88%;
+
+            }
+
+
+            .portfolio-cover-content h1 {
+
+                font-size: 48px;
+
+            }
+
+
+            .portfolio-content {
+
+                width: 90%;
+
+                padding: 65px 0;
+
+            }
+
+
+            .portfolio-heading h2 {
+
+                font-size: 38px;
+
+            }
+
+
+            .photos-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+
+            }
+
+
+            .photo-box,
+            .photo-box.large {
+
+                height: 260px;
+
+            }
+
+
+            .photo-box.wide {
+
+                grid-column: span 1;
+
+            }
+
+
+            .photo-box.large {
+
+                height: 320px;
+
+            }
+
+
+            .photo-caption {
+
+                opacity: 1;
+
+            }
+
+
+            .videos-area {
+
+                padding: 65px 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="container header-container">
+
+
+        <a href="index.html"
+           class="logo">
+
+            LENS
+            <span>STUDIO</span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Serviços
+                    </a>
+                </li>
+
+                <li>
+                    <a href="portifolio.html"
+                       class="active">
+                        Portfólio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button id="theme-toggle"
+                    aria-label="Alterar tema">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <a href="contact.html"
+               class="btn-primary">
+
+                Reservar sessão
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CAPA
+===================================================== -->
+
+<main class="portfolio-page">
+
+
+<section class="portfolio-cover">
+
+    <div class="portfolio-cover-content">
+
+        <small>
+            04 · PORTFÓLIO
+        </small>
+
+        <h1>
+
+            Histórias
+            <em>capturadas.</em>
+
+        </h1>
+
+        <p>
+
+            Uma seleção dos nossos trabalhos
+            de fotografia e produção audiovisual,
+            realizados com criatividade,
+            emoção e atenção aos detalhes.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOTOGRAFIAS
+===================================================== -->
+
+<section class="portfolio-content">
+
+    <div class="portfolio-heading">
+
+        <small>
+            FOTOGRAFIA
+        </small>
+
+        <h2>
+            O nosso olhar.
+        </h2>
+
+        <p>
+            Momentos transformados em memórias.
+        </p>
+
+    </div>
+
+
+    <div class="photos-container">
+
+
+        <!-- FOTO 1 -->
+
+        <div class="photo-box large">
+
+            <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+                alt="Fotografia de casamento">
+
+            <div class="photo-caption">
+
+                <small>
+                    CASAMENTO
+                </small>
+
+                <h3>
+                    Momentos únicos
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 2 -->
+
+        <div class="photo-box">
+
+            <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80"
+                alt="Retrato profissional">
+
+            <div class="photo-caption">
+
+                <small>
+                    RETRATO
+                </small>
+
+                <h3>
+                    Personalidade
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 3 -->
+
+        <div class="photo-box">
+
+            <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=80"
+                alt="Evento">
+
+            <div class="photo-caption">
+
+                <small>
+                    EVENTOS
+                </small>
+
+                <h3>
+                    Energia
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 4 -->
+
+        <div class="photo-box">
+
+            <img
+                src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=700&q=80"
+                alt="Fotografia editorial">
+
+            <div class="photo-caption">
+
+                <small>
+                    EDITORIAL
+                </small>
+
+                <h3>
+                    Criatividade
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 5 -->
+
+        <div class="photo-box">
+
+            <img
+                src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=700&q=80"
+                alt="Casamento">
+
+            <div class="photo-caption">
+
+                <small>
+                    WEDDING
+                </small>
+
+                <h3>
+                    Para sempre
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 6 -->
+
+        <div class="photo-box wide">
+
+            <img
+                src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1100&q=80"
+                alt="Produção audiovisual">
+
+            <div class="photo-caption">
+
+                <small>
+                    PRODUÇÃO
+                </small>
+
+                <h3>
+                    Experiências que permanecem
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VÍDEOS
+===================================================== -->
+
+<section class="videos-area">
+
+    <div class="videos-container">
+
+
+        <div class="portfolio-heading">
+
+            <small>
+                PRODUÇÃO AUDIOVISUAL
+            </small>
+
+            <h2>
+                Histórias em movimento.
+            </h2>
+
+            <p>
+                Produções que vão além da fotografia.
+            </p>
+
+        </div>
+
+
+        <div class="videos-grid">
+
+
+            <div class="video-box">
+
+                <video controls
+                       poster="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=80">
+
+                    <source
+                        src="videos/video1.mp4"
+                        type="video/mp4">
+
+                    O seu navegador não suporta vídeo.
+
+                </video>
+
+
+                <div class="video-description">
+
+                    <small>
+                        EVENTO
+                    </small>
+
+                    <h3>
+                        Histórias em movimento
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="video-box">
+
+                <video controls
+                       poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80">
+
+                    <source
+                        src="videos/video2.mp4"
+                        type="video/mp4">
+
+                    O seu navegador não suporta vídeo.
+
+                </video>
+
+
+                <div class="video-description">
+
+                    <small>
+                        PRODUÇÃO
+                    </small>
+
+                    <h3>
+                        Cinema para marcas
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="portfolio-final">
+
+    <small>
+        VAMOS CRIAR JUNTOS?
+    </small>
+
+    <h2>
+
+        A sua história
+        <em>começa aqui.</em>
+
+    </h2>
+
+    <p>
+
+        Tem um projeto ou evento em mente?
+        Vamos conversar.
+
+    </p>
+
+    <a href="contact.html"
+       class="portfolio-button">
+
+        Falar connosco
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="logo">
+
+                    LENS
+                    <span>STUDIO</span>
+
+                </a>
+
+                <p>
+
+                    Fotografia e vídeo para
+                    histórias que merecem
+                    ser lembradas.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Navegação
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    Sobre
+                </a>
+
+                <a href="services.html">
+                    Serviços
+                </a>
+
+                <a href="portifolio.html">
+                    Portfólio
+                </a>
+
+                <a href="contact.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Contacto
+                </h4>
+
+                <a href="mailto:hello@lensstudio.com">
+                    hello@lensstudio.com
+                </a>
+
+                <a href="tel:+258840000000">
+                    +258 84 000 0000
+                </a>
+
+                <span>
+                    Maputo, Moçambique
+                </span>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h4>
+                    Siga-nos
+                </h4>
+
+                <div>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Lens Studio.
+                Todos os direitos reservados.
+            </span>
+
+            <span>
+                Fotografia · Vídeo · Criatividade
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="assets/script.js"></script>
+
+</body>
+
+</html>
+```
